@@ -354,6 +354,7 @@
                 <button class="nav-btn" onclick="showPage('notes')">Notes</button>
                 <button class="nav-btn" onclick="showPage('stop')">Stopwatch</button>
                 <button class="nav-btn" onclick="showPage('time')">Timer</button>
+                <button class="nav-btn" onclick="showPage('seo')">SEO Tools</button>
             </nav>
         </div>
     </header>
@@ -420,6 +421,13 @@
                 <h2>Timer</h2>
                 <p>Countdown timer with custom alarms</p>
                 <button onclick="showPage('time')">Open Tool</button>
+            </article>
+
+            <article class="card">
+                <div class="icon">🔍</div>
+                <h2>SEO Tools Hub</h2>
+                <p>6 powerful SEO keyword research tools in one place</p>
+                <button onclick="showPage('seo')">Open Tool</button>
             </article>
         </div>
     </section>
@@ -570,6 +578,14 @@
         <!-- TIMER -->
         <section id="time" class="section">
             <h1>Countdown Timer</h1>
+            
+            <div class="group">
+                <label>
+                    <input type="checkbox" id="sound-enabled" checked style="width:auto;margin-right:5px;">
+                    Enable alarm sound when timer ends
+                </label>
+            </div>
+
             <div class="group">
                 <label>Minutes:</label>
                 <input type="number" id="timer-min" placeholder="5" min="0">
@@ -583,6 +599,62 @@
                 <button class="btn" onclick="startTimer()">Start</button>
                 <button class="btn btn-sec" onclick="pauseTimer()">Pause</button>
                 <button class="btn btn-del" onclick="resetTimer()">Reset</button>
+            </div>
+        </section>
+
+        <!-- SEO TOOLS -->
+        <section id="seo" class="section">
+            <h1>SEO Tools Hub - Free Keyword Research</h1>
+            <p style="margin-bottom: 2rem; color: #555;">Access 6 powerful SEO tools to boost your rankings. Click any tool below to open it in a new tab.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <article class="item" style="cursor: pointer; transition: all 0.3s;" onclick="window.open('https://answerthepublic.com', '_blank')">
+                    <h2 style="color: #3498db; margin-bottom: 0.5rem;">📊 AnswerThePublic</h2>
+                    <p style="color: #555; margin-bottom: 0.8rem;">Type a keyword and get real questions people search. Shows "who/what/why/how" patterns for content ideas. Perfect for blog topics!</p>
+                    <span style="display: inline-block; padding: 0.4rem 0.8rem; background: #3498db; color: white; border-radius: 5px; font-size: 0.85rem;">Free Tool →</span>
+                </article>
+
+                <article class="item" style="cursor: pointer; transition: all 0.3s;" onclick="window.open('https://trends.google.com', '_blank')">
+                    <h2 style="color: #e74c3c; margin-bottom: 0.5rem;">📈 Google Trends</h2>
+                    <p style="color: #555; margin-bottom: 0.8rem;">See search interest over time. Shows rising and falling topics by region. Helps pick keywords before they peak!</p>
+                    <span style="display: inline-block; padding: 0.4rem 0.8rem; background: #e74c3c; color: white; border-radius: 5px; font-size: 0.85rem;">Free Tool →</span>
+                </article>
+
+                <article class="item" style="cursor: pointer; transition: all 0.3s;" onclick="window.open('https://soovle.com', '_blank')">
+                    <h2 style="color: #9b59b6; margin-bottom: 0.5rem;">🔎 Soovle</h2>
+                    <p style="color: #555; margin-bottom: 0.8rem;">Get autocomplete suggestions from multiple search engines. Shows long-tail ideas from Google, YouTube, Bing instantly!</p>
+                    <span style="display: inline-block; padding: 0.4rem 0.8rem; background: #9b59b6; color: white; border-radius: 5px; font-size: 0.85rem;">Free Tool →</span>
+                </article>
+
+                <article class="item" style="cursor: pointer; transition: all 0.3s;" onclick="window.open('https://keyworddit.com', '_blank')">
+                    <h2 style="color: #f39c12; margin-bottom: 0.5rem;">💬 Keyworddit</h2>
+                    <p style="color: #555; margin-bottom: 0.8rem;">Pulls keyword ideas from Reddit threads. Shows actual search terms plus monthly estimates. Great for niche topics!</p>
+                    <span style="display: inline-block; padding: 0.4rem 0.8rem; background: #f39c12; color: white; border-radius: 5px; font-size: 0.85rem;">Free Tool →</span>
+                </article>
+
+                <article class="item" style="cursor: pointer; transition: all 0.3s;" onclick="window.open('https://alsoasked.com', '_blank')">
+                    <h2 style="color: #27ae60; margin-bottom: 0.5rem;">❓ AlsoAsked</h2>
+                    <p style="color: #555; margin-bottom: 0.8rem;">Shows real "people also ask" questions. Maps them in a tree format. Perfect for targeting question-based content!</p>
+                    <span style="display: inline-block; padding: 0.4rem 0.8rem; background: #27ae60; color: white; border-radius: 5px; font-size: 0.85rem;">Free Tool →</span>
+                </article>
+
+                <article class="item" style="cursor: pointer; transition: all 0.3s;" onclick="window.open('https://smallseotools.com/google-ranking-checker/', '_blank')">
+                    <h2 style="color: #2980b9; margin-bottom: 0.5rem;">📍 Bulk Rank Checker</h2>
+                    <p style="color: #555; margin-bottom: 0.8rem;">Check where your domain ranks in Google for multiple keywords. Find easy wins you already rank for!</p>
+                    <span style="display: inline-block; padding: 0.4rem 0.8rem; background: #2980b9; color: white; border-radius: 5px; font-size: 0.85rem;">Free Tool →</span>
+                </article>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #ecf0f1; border-radius: 8px;">
+                <h2 style="color: #2c3e50; margin-bottom: 1rem;">💡 Pro Tips for Using These Tools:</h2>
+                <ul style="color: #555; line-height: 1.8; padding-left: 1.5rem;">
+                    <li><strong>Start with Google Trends:</strong> Find trending topics in your niche before they peak</li>
+                    <li><strong>Use AnswerThePublic:</strong> Generate 100+ content ideas from one keyword</li>
+                    <li><strong>Check Soovle:</strong> Get quick long-tail keyword variations</li>
+                    <li><strong>Mine Keyworddit:</strong> Find conversational keywords from real Reddit discussions</li>
+                    <li><strong>Expand with AlsoAsked:</strong> Build comprehensive FAQ sections</li>
+                    <li><strong>Verify with Rank Checker:</strong> See where you already rank and optimize those pages</li>
+                </ul>
             </div>
         </section>
     </div>
@@ -614,6 +686,106 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script>
+        // AUDIO CONTEXT FOR SOUNDS
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // KEYSTROKE SOUND
+        function playKeystroke() {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = 800;
+            oscillator.type = 'sine';
+            
+            gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.05);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.05);
+        }
+
+        // CLICK SOUND
+        function playClick() {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = 1000;
+            oscillator.type = 'sine';
+            
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.03);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.03);
+        }
+
+        // BELL ALARM SOUND
+        function playBellAlarm() {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    const oscillator = audioContext.createOscillator();
+                    const gainNode = audioContext.createGain();
+                    
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+                    
+                    oscillator.frequency.value = 800;
+                    oscillator.type = 'sine';
+                    
+                    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                    
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.5);
+                }, i * 300);
+            }
+        }
+
+        // SUCCESS SOUND
+        function playSuccess() {
+            const frequencies = [523.25, 659.25, 783.99];
+            frequencies.forEach((freq, i) => {
+                setTimeout(() => {
+                    const oscillator = audioContext.createOscillator();
+                    const gainNode = audioContext.createGain();
+                    
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+                    
+                    oscillator.frequency.value = freq;
+                    oscillator.type = 'sine';
+                    
+                    gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                    
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.3);
+                }, i * 100);
+            });
+        }
+
+        // Add keystroke sound to all inputs
+        document.addEventListener('DOMContentLoaded', () => {
+            document.addEventListener('keydown', (e) => {
+                if (e.target.matches('input[type="text"], input[type="number"], textarea')) {
+                    playKeystroke();
+                }
+            });
+
+            // Add click sound to all buttons
+            document.addEventListener('click', (e) => {
+                if (e.target.matches('button')) {
+                    playClick();
+                }
+            });
+        });
+
         // NAVIGATION
         function showPage(pageId) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
@@ -722,6 +894,7 @@
                 password += chars.charAt(Math.floor(Math.random() * chars.length));
             }
             document.getElementById('gen-pass').value = password;
+            playSuccess();
         }
 
         function copyPass() {
@@ -729,6 +902,7 @@
             if (el.value) {
                 el.select();
                 document.execCommand('copy');
+                playSuccess();
                 alert('Password copied to clipboard!');
             }
         }
@@ -753,6 +927,8 @@
                 colorDark: '#000000',
                 colorLight: '#ffffff'
             });
+            
+            playSuccess();
         }
 
         function downloadQR() {
@@ -780,6 +956,7 @@
             input.value = '';
             saveTodos();
             renderTodos();
+            playSuccess();
         }
 
         function toggleTask(id) {
@@ -843,6 +1020,7 @@
             document.getElementById('note-content').value = '';
             saveNotes();
             renderNotes();
+            playSuccess();
         }
 
         function deleteNote(id) {
@@ -934,6 +1112,12 @@
                     timerRemaining = 0;
                     pauseTimer();
                     displayTimer();
+                    
+                    // Play alarm if enabled
+                    if (document.getElementById('sound-enabled').checked) {
+                        playBellAlarm();
+                    }
+                    
                     alert('⏰ Time is up!');
                     return;
                 }
