@@ -54,22 +54,24 @@
 
         .nav-btn {
             padding: 0.6rem 1.2rem;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.15);
             border: none;
             border-radius: 6px;
-            color: white;
+            color: #ffffff;
             font-size: 0.9rem;
             cursor: pointer;
             white-space: nowrap;
             transition: all 0.2s;
+            font-weight: 500;
         }
 
         .nav-btn:hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.25);
         }
 
         .nav-btn.active {
             background: #3498db;
+            font-weight: 600;
         }
 
         .hero {
@@ -111,24 +113,26 @@
             margin-bottom: 1rem;
         }
 
-        .card h3 {
+        .card h2 {
             color: #2c3e50;
             margin-bottom: 0.8rem;
+            font-size: 1.3rem;
         }
 
         .card button {
             width: 100%;
             padding: 0.8rem;
-            background: #3498db;
-            color: white;
+            background: #2980b9;
+            color: #ffffff;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             font-weight: 600;
+            font-size: 0.95rem;
         }
 
         .card button:hover {
-            background: #2980b9;
+            background: #21618c;
         }
 
         .wrap {
@@ -149,16 +153,18 @@
             display: block;
         }
 
-        h2 {
+        h1 {
             color: #2c3e50;
             margin-bottom: 1.8rem;
             padding-bottom: 0.5rem;
             border-bottom: 3px solid #3498db;
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
         }
 
-        h3 {
+        h2 {
             color: #2c3e50;
             margin: 1.5rem 0 1rem;
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
         }
 
         .group {
@@ -352,6 +358,7 @@
         </div>
     </header>
 
+    <main>
     <section id="home" class="section active">
         <div class="hero">
             <h1>Free Online Tools 2025</h1>
@@ -359,68 +366,68 @@
         </div>
 
         <div class="grid">
-            <div class="card">
+            <article class="card">
                 <div class="icon">📝</div>
-                <h3>Text Counter</h3>
+                <h2>Text Counter</h2>
                 <p>Count words, characters, sentences with reading time</p>
                 <button onclick="showPage('text')">Open Tool</button>
-            </div>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <div class="icon">🔄</div>
-                <h3>Unit Converter</h3>
+                <h2>Unit Converter</h2>
                 <p>Temperature, weight, length converters with formulas</p>
                 <button onclick="showPage('convert')">Open Tool</button>
-            </div>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <div class="icon">🔐</div>
-                <h3>Password Generator</h3>
+                <h2>Password Generator</h2>
                 <p>Generate secure passwords up to 128 characters</p>
                 <button onclick="showPage('pass')">Open Tool</button>
-            </div>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <div class="icon">📱</div>
-                <h3>QR Code Generator</h3>
+                <h2>QR Code Generator</h2>
                 <p>Create QR codes for URLs, WiFi, vCard, and more</p>
                 <button onclick="showPage('qr')">Open Tool</button>
-            </div>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <div class="icon">✅</div>
-                <h3>Todo List</h3>
+                <h2>Todo List</h2>
                 <p>Smart task manager with categories and priorities</p>
                 <button onclick="showPage('todo')">Open Tool</button>
-            </div>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <div class="icon">📓</div>
-                <h3>Notes App</h3>
+                <h2>Notes App</h2>
                 <p>Take notes with tags, categories, and search</p>
                 <button onclick="showPage('notes')">Open Tool</button>
-            </div>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <div class="icon">⏱️</div>
-                <h3>Stopwatch</h3>
+                <h2>Stopwatch</h2>
                 <p>Precision timing with lap records</p>
                 <button onclick="showPage('stop')">Open Tool</button>
-            </div>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <div class="icon">⏲️</div>
-                <h3>Timer</h3>
+                <h2>Timer</h2>
                 <p>Countdown timer with custom alarms</p>
                 <button onclick="showPage('time')">Open Tool</button>
-            </div>
+            </article>
         </div>
     </section>
 
     <div class="wrap">
         <!-- TEXT TOOLS -->
         <section id="text" class="section">
-            <h2>Text Analysis Tools</h2>
+            <h1>Text Analysis Tools</h1>
             <div class="group">
                 <label>Enter Text:</label>
                 <textarea id="txt" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
@@ -453,8 +460,8 @@
 
         <!-- CONVERTERS -->
         <section id="convert" class="section">
-            <h2>Unit Converters</h2>
-            <h3>Temperature Converter</h3>
+            <h1>Unit Converters</h1>
+            <h2>Temperature Converter</h2>
             <div class="group">
                 <label>Celsius (°C)</label>
                 <input type="number" id="cel" placeholder="0" oninput="convertTemp('c')">
@@ -468,7 +475,7 @@
                 <input type="number" id="kel" placeholder="273.15" oninput="convertTemp('k')">
             </div>
 
-            <h3>Weight Converter</h3>
+            <h2>Weight Converter</h2>
             <div class="group">
                 <label>Kilograms (kg)</label>
                 <input type="number" id="kg" placeholder="0" oninput="convertWeight()">
@@ -478,7 +485,7 @@
                 <input type="number" id="lbs" placeholder="0" oninput="convertWeight()">
             </div>
 
-            <h3>Length Converter</h3>
+            <h2>Length Converter</h2>
             <div class="group">
                 <label>Meters (m)</label>
                 <input type="number" id="meter" placeholder="0" oninput="convertLength()">
@@ -491,7 +498,7 @@
 
         <!-- PASSWORD GENERATOR -->
         <section id="pass" class="section">
-            <h2>Password Generator</h2>
+            <h1>Password Generator</h1>
             <div class="group">
                 <label>Password Length: <span id="len-val">16</span></label>
                 <input type="range" id="len" min="8" max="128" value="16" oninput="updateLen()">
@@ -512,7 +519,7 @@
 
         <!-- QR CODE -->
         <section id="qr" class="section">
-            <h2>QR Code Generator</h2>
+            <h1>QR Code Generator</h1>
             <div class="group">
                 <label>Text or URL:</label>
                 <input type="text" id="qr-text" placeholder="Enter text or URL">
@@ -524,7 +531,7 @@
 
         <!-- TODO LIST -->
         <section id="todo" class="section">
-            <h2>Todo List</h2>
+            <h1>Todo List</h1>
             <div class="group">
                 <label>New Task:</label>
                 <input type="text" id="task-input" placeholder="Enter task..." onkeypress="if(event.key==='Enter') addTask()">
@@ -536,7 +543,7 @@
 
         <!-- NOTES -->
         <section id="notes" class="section">
-            <h2>Notes</h2>
+            <h1>Notes</h1>
             <div class="group">
                 <label>Title:</label>
                 <input type="text" id="note-title" placeholder="Note title">
@@ -551,7 +558,7 @@
 
         <!-- STOPWATCH -->
         <section id="stop" class="section">
-            <h2>Stopwatch</h2>
+            <h1>Stopwatch</h1>
             <div class="timer-big" id="stopwatch">00:00:00</div>
             <div class="timer-btns">
                 <button class="btn" onclick="startStop()">Start</button>
@@ -562,7 +569,7 @@
 
         <!-- TIMER -->
         <section id="time" class="section">
-            <h2>Countdown Timer</h2>
+            <h1>Countdown Timer</h1>
             <div class="group">
                 <label>Minutes:</label>
                 <input type="number" id="timer-min" placeholder="5" min="0">
@@ -579,6 +586,7 @@
             </div>
         </section>
     </div>
+    </main>
 
     <!-- SEO SECTION -->
     <section class="seo-section">
