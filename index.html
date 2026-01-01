@@ -306,10 +306,18 @@
 
         footer {
             background: #2c3e50;
-            color: white;
+            color: #ffffff;
             padding: 2rem 1.5rem;
             text-align: center;
             margin-top: 3rem;
+        }
+        
+        footer a {
+            color: #3498db;
+        }
+        
+        footer a:hover {
+            color: #5dade2;
         }
 
         .seo-section {
@@ -334,6 +342,15 @@
             border-radius: 50%;
             border: 5px solid #3498db;
             object-fit: cover;
+            loading: lazy;
+        }
+        
+        /* Responsive image sizing */
+        @media (max-width: 768px) {
+            .seo-image {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         .badge {
@@ -379,90 +396,100 @@
     <main>
     <section id="home" class="section active">
         <div class="hero">
-            <h1>Free Online Tools 2025 - Best Productivity Suite</h1>
-            <p>9 essential tools absolutely free! Text counter, unit converters, password generator, QR codes, notes app, todo list, timers & professional SEO tools. No registration, instant access!</p>
+            <h1>Free Online Tools 2025 - Word Counter, Unit Converter & More</h1>
+            <p>9 essential free tools: <strong>word counter</strong>, <strong>character counter</strong>, <strong>temperature converter</strong>, <strong>password generator</strong>, <strong>QR code maker</strong>, notes app, todo list, stopwatch & timer. No registration • Instant access • 100% free forever!</p>
         </div>
 
         <!-- Internal Links Section for SEO -->
         <div style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
             <article style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); margin-bottom: 2rem;">
-                <h2 style="color: #2c3e50; font-size: 1.8rem; margin-bottom: 1rem;">Best Free Online Tools for Maximum Productivity</h2>
+                <h2 style="color: #2c3e50; font-size: 1.8rem; margin-bottom: 1rem;">Best Free Online Tools 2025 - No Download Required</h2>
                 <p style="color: #555; line-height: 1.8; margin-bottom: 1rem;">
-                    Welcome to the most comprehensive collection of <strong>free online tools 2025</strong>! Whether you need a <strong>word counter online free</strong>, <strong>temperature converter celsius to fahrenheit</strong>, <strong>secure password generator</strong>, or <strong>QR code maker</strong>, we've got you covered. All tools work instantly in your browser—no downloads, no registration, completely free forever.
+                    Welcome to the most comprehensive collection of <strong>free online tools</strong> available in 2025! Our suite includes a <strong>word counter online free</strong> with no character limits, <strong>instant unit converter calculator</strong> for temperature/weight/length, <strong>secure password generator</strong> creating random passwords up to 128 characters, <strong>free QR code maker</strong> with download options, and much more. Perfect for <strong>students</strong>, <strong>writers</strong>, <strong>developers</strong>, <strong>teachers</strong>, and <strong>businesses</strong>.
                 </p>
-                <h3 style="color: #2c3e50; font-size: 1.4rem; margin: 1.5rem 0 1rem;">Why Choose Our Free Online Tools?</h3>
+                <h3 style="color: #2c3e50; font-size: 1.4rem; margin: 1.5rem 0 1rem;">Why Our Free Online Tools Are the Best Choice</h3>
                 <ul style="color: #555; line-height: 1.8; padding-left: 1.5rem;">
-                    <li><strong>100% Free Forever:</strong> No hidden costs, trials, or premium upsells</li>
-                    <li><strong>No Registration Required:</strong> Start using any tool immediately</li>
-                    <li><strong>Privacy First:</strong> All processing happens locally in your browser</li>
-                    <li><strong>Mobile Friendly:</strong> Works perfectly on phones, tablets, and desktops</li>
-                    <li><strong>Lightning Fast:</strong> Optimized for instant results</li>
-                    <li><strong>SEO Optimized:</strong> Professional SEO tools hub included</li>
+                    <li><strong>100% Free Forever:</strong> No trials, no premium plans, no hidden fees - completely free</li>
+                    <li><strong>No Registration Required:</strong> Use any tool instantly without creating an account</li>
+                    <li><strong>No Download Needed:</strong> All tools work directly in your web browser</li>
+                    <li><strong>Privacy First:</strong> Your data never leaves your device - everything processes locally</li>
+                    <li><strong>Mobile Friendly:</strong> Responsive design works perfectly on iPhone, Android, tablets</li>
+                    <li><strong>Lightning Fast:</strong> Instant results with optimized code and CDN delivery</li>
+                    <li><strong>No Limits:</strong> Unlimited usage on word counter, converters, and all tools</li>
+                    <li><strong>SEO Tools Included:</strong> Access 6 professional keyword research tools</li>
                 </ul>
+                <h3 style="color: #2c3e50; font-size: 1.3rem; margin: 1.5rem 0 1rem;">Popular Use Cases:</h3>
+                <p style="color: #555; line-height: 1.8;">
+                    <strong>For Students:</strong> Word counter for essays, unit converter for homework, QR codes for projects<br>
+                    <strong>For Writers:</strong> Character counter for social media, text analyzer for content<br>
+                    <strong>For Developers:</strong> Password generator for secure credentials, unit converters for calculations<br>
+                    <strong>For Businesses:</strong> QR code maker for marketing, todo lists for project management<br>
+                    <strong>For Everyone:</strong> Notes app for ideas, stopwatch for timing, countdown timer for reminders
+                </p>
             </article>
         </div>
 
         <div class="grid">
             <article class="card">
                 <div class="icon">📝</div>
-                <h2>Free Text Counter Online</h2>
-                <p>Word counter, character counter, sentence counter with reading time estimates. Best for writers, students, bloggers.</p>
-                <button onclick="showPage('text')">Open Text Counter</button>
+                <h2>Free Word Counter Online</h2>
+                <p>Count words, characters, sentences instantly. No limits. Real-time word counter for essays, articles, social media posts.</p>
+                <button onclick="showPage('text')">Open Word Counter</button>
             </article>
 
             <article class="card">
                 <div class="icon">🔄</div>
                 <h2>Unit Converter Calculator</h2>
-                <p>Convert temperature (°C to °F), weight (kg to lbs), length (meters to feet) instantly with accurate formulas.</p>
+                <p>Convert temperature (°C ↔ °F), weight (kg ↔ lbs), length (m ↔ ft) instantly. Shows formulas. Free calculator.</p>
                 <button onclick="showPage('convert')">Open Converter</button>
             </article>
 
             <article class="card">
                 <div class="icon">🔐</div>
-                <h2>Secure Password Generator</h2>
-                <p>Generate strong random passwords up to 128 characters. Military-grade security with strength analyzer.</p>
+                <h2>Password Generator Online</h2>
+                <p>Generate strong random passwords instantly. Up to 128 characters. Secure, cryptographic password creator.</p>
                 <button onclick="showPage('pass')">Generate Password</button>
             </article>
 
             <article class="card">
                 <div class="icon">📱</div>
-                <h2>QR Code Generator Free</h2>
-                <p>Create & download QR codes for URLs, WiFi passwords, vCards instantly. Best free QR code maker 2025.</p>
+                <h2>QR Code Maker Free</h2>
+                <p>Create QR codes instantly. For URLs, WiFi, text, vCards. Download free. Best QR code generator 2025.</p>
                 <button onclick="showPage('qr')">Create QR Code</button>
             </article>
 
             <article class="card">
                 <div class="icon">✅</div>
-                <h2>Todo List Manager</h2>
-                <p>Smart task manager with priorities, categories, auto-save. Best free online todo list app.</p>
+                <h2>Todo List Online Free</h2>
+                <p>Simple task manager with priorities, auto-save. Best free online todo list. No sign up required.</p>
                 <button onclick="showPage('todo')">Open Todo List</button>
             </article>
 
             <article class="card">
                 <div class="icon">📓</div>
-                <h2>Notes App Online Free</h2>
-                <p>Quick notes with timestamps, search, and export. Simple, fast, secure note-taking tool.</p>
+                <h2>Notes App Online</h2>
+                <p>Quick notes with timestamps, search. Simple, fast note-taking tool. Saves automatically to your browser.</p>
                 <button onclick="showPage('notes')">Open Notes</button>
             </article>
 
             <article class="card seo-card">
                 <div class="icon">🔍</div>
-                <h2>Free SEO Tools Hub</h2>
-                <p>6 professional keyword research tools: Google Trends, AnswerThePublic, Soovle & more in one place.</p>
+                <h2>Free SEO Tools 2025</h2>
+                <p>6 best keyword research tools: Google Trends, AnswerThePublic, Soovle, Keyworddit, AlsoAsked, rank checker.</p>
                 <button onclick="showPage('seo')">Open SEO Tools</button>
             </article>
 
             <article class="card">
                 <div class="icon">⏱️</div>
-                <h2>Stopwatch Online Free</h2>
-                <p>Precision stopwatch with millisecond accuracy. Perfect for sports, fitness, and time tracking.</p>
+                <h2>Stopwatch Online</h2>
+                <p>Precision stopwatch with milliseconds. Free online timer for sports, fitness, cooking, work sessions.</p>
                 <button onclick="showPage('stop')">Open Stopwatch</button>
             </article>
 
             <article class="card">
                 <div class="icon">⏲️</div>
-                <h2>Countdown Timer with Alarm</h2>
-                <p>Set custom timers with bell alarms. Perfect for Pomodoro, cooking, workouts, and reminders.</p>
+                <h2>Timer Online Free</h2>
+                <p>Countdown timer with alarm. Pomodoro timer, cooking timer, workout timer. Custom durations and sounds.</p>
                 <button onclick="showPage('time')">Open Timer</button>
             </article>
         </div>
@@ -759,7 +786,13 @@
     <section class="seo-section">
         <h2>Professional SEO Services by Uzair Ali</h2>
         <div class="seo-profile">
-            <img src="uzair-ali-seo.jpg" alt="Uzair Ali - Professional SEO Expert & Web Developer" class="seo-image" onerror="this.style.display='none'">
+            <img src="uzair-ali-seo.jpg" 
+                 alt="Uzair Ali - Professional SEO Expert & Web Developer" 
+                 class="seo-image" 
+                 width="180" 
+                 height="180"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
             <div>
                 <h3>Uzair Ali - Top Fiverr SEO Expert</h3>
                 <p style="font-size: 1.2rem; color: #3498db; margin-bottom: 0.5rem;">Professional SEO Specialist | Technical SEO | Google Rankings Expert</p>
@@ -860,7 +893,7 @@
         </p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
     <script>
         // AUDIO CONTEXT FOR SOUNDS
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
