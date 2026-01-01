@@ -95,6 +95,18 @@
             margin: 0 auto;
             padding: 2rem 1.5rem;
         }
+        
+        /* Special positioning for SEO card on desktop */
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .seo-card {
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+            }
+        }
 
         .card {
             background: white;
@@ -337,6 +349,11 @@
             .grid {
                 grid-template-columns: 1fr;
             }
+            
+            .seo-card {
+                grid-column: auto;
+                grid-row: auto;
+            }
         }
     </style>
 </head>
@@ -362,72 +379,114 @@
     <main>
     <section id="home" class="section active">
         <div class="hero">
-            <h1>Free Online Tools 2025</h1>
-            <p>15+ powerful productivity tools - 100% free forever!</p>
+            <h1>Free Online Tools 2025 - Best Productivity Suite</h1>
+            <p>9 essential tools absolutely free! Text counter, unit converters, password generator, QR codes, notes app, todo list, timers & professional SEO tools. No registration, instant access!</p>
+        </div>
+
+        <!-- Internal Links Section for SEO -->
+        <div style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+            <article style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+                <h2 style="color: #2c3e50; font-size: 1.8rem; margin-bottom: 1rem;">Best Free Online Tools for Maximum Productivity</h2>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 1rem;">
+                    Welcome to the most comprehensive collection of <strong>free online tools 2025</strong>! Whether you need a <strong>word counter online free</strong>, <strong>temperature converter celsius to fahrenheit</strong>, <strong>secure password generator</strong>, or <strong>QR code maker</strong>, we've got you covered. All tools work instantly in your browser—no downloads, no registration, completely free forever.
+                </p>
+                <h3 style="color: #2c3e50; font-size: 1.4rem; margin: 1.5rem 0 1rem;">Why Choose Our Free Online Tools?</h3>
+                <ul style="color: #555; line-height: 1.8; padding-left: 1.5rem;">
+                    <li><strong>100% Free Forever:</strong> No hidden costs, trials, or premium upsells</li>
+                    <li><strong>No Registration Required:</strong> Start using any tool immediately</li>
+                    <li><strong>Privacy First:</strong> All processing happens locally in your browser</li>
+                    <li><strong>Mobile Friendly:</strong> Works perfectly on phones, tablets, and desktops</li>
+                    <li><strong>Lightning Fast:</strong> Optimized for instant results</li>
+                    <li><strong>SEO Optimized:</strong> Professional SEO tools hub included</li>
+                </ul>
+            </article>
         </div>
 
         <div class="grid">
             <article class="card">
                 <div class="icon">📝</div>
-                <h2>Text Counter</h2>
-                <p>Count words, characters, sentences with reading time</p>
-                <button onclick="showPage('text')">Open Tool</button>
+                <h2>Free Text Counter Online</h2>
+                <p>Word counter, character counter, sentence counter with reading time estimates. Best for writers, students, bloggers.</p>
+                <button onclick="showPage('text')">Open Text Counter</button>
             </article>
 
             <article class="card">
                 <div class="icon">🔄</div>
-                <h2>Unit Converter</h2>
-                <p>Temperature, weight, length converters with formulas</p>
-                <button onclick="showPage('convert')">Open Tool</button>
+                <h2>Unit Converter Calculator</h2>
+                <p>Convert temperature (°C to °F), weight (kg to lbs), length (meters to feet) instantly with accurate formulas.</p>
+                <button onclick="showPage('convert')">Open Converter</button>
             </article>
 
             <article class="card">
                 <div class="icon">🔐</div>
-                <h2>Password Generator</h2>
-                <p>Generate secure passwords up to 128 characters</p>
-                <button onclick="showPage('pass')">Open Tool</button>
+                <h2>Secure Password Generator</h2>
+                <p>Generate strong random passwords up to 128 characters. Military-grade security with strength analyzer.</p>
+                <button onclick="showPage('pass')">Generate Password</button>
             </article>
 
             <article class="card">
                 <div class="icon">📱</div>
-                <h2>QR Code Generator</h2>
-                <p>Create QR codes for URLs, WiFi, vCard, and more</p>
-                <button onclick="showPage('qr')">Open Tool</button>
+                <h2>QR Code Generator Free</h2>
+                <p>Create & download QR codes for URLs, WiFi passwords, vCards instantly. Best free QR code maker 2025.</p>
+                <button onclick="showPage('qr')">Create QR Code</button>
             </article>
 
             <article class="card">
                 <div class="icon">✅</div>
-                <h2>Todo List</h2>
-                <p>Smart task manager with categories and priorities</p>
-                <button onclick="showPage('todo')">Open Tool</button>
+                <h2>Todo List Manager</h2>
+                <p>Smart task manager with priorities, categories, auto-save. Best free online todo list app.</p>
+                <button onclick="showPage('todo')">Open Todo List</button>
             </article>
 
             <article class="card">
                 <div class="icon">📓</div>
-                <h2>Notes App</h2>
-                <p>Take notes with tags, categories, and search</p>
-                <button onclick="showPage('notes')">Open Tool</button>
+                <h2>Notes App Online Free</h2>
+                <p>Quick notes with timestamps, search, and export. Simple, fast, secure note-taking tool.</p>
+                <button onclick="showPage('notes')">Open Notes</button>
+            </article>
+
+            <article class="card seo-card">
+                <div class="icon">🔍</div>
+                <h2>Free SEO Tools Hub</h2>
+                <p>6 professional keyword research tools: Google Trends, AnswerThePublic, Soovle & more in one place.</p>
+                <button onclick="showPage('seo')">Open SEO Tools</button>
             </article>
 
             <article class="card">
                 <div class="icon">⏱️</div>
-                <h2>Stopwatch</h2>
-                <p>Precision timing with lap records</p>
-                <button onclick="showPage('stop')">Open Tool</button>
+                <h2>Stopwatch Online Free</h2>
+                <p>Precision stopwatch with millisecond accuracy. Perfect for sports, fitness, and time tracking.</p>
+                <button onclick="showPage('stop')">Open Stopwatch</button>
             </article>
 
             <article class="card">
                 <div class="icon">⏲️</div>
-                <h2>Timer</h2>
-                <p>Countdown timer with custom alarms</p>
-                <button onclick="showPage('time')">Open Tool</button>
+                <h2>Countdown Timer with Alarm</h2>
+                <p>Set custom timers with bell alarms. Perfect for Pomodoro, cooking, workouts, and reminders.</p>
+                <button onclick="showPage('time')">Open Timer</button>
             </article>
+        </div>
 
-            <article class="card">
-                <div class="icon">🔍</div>
-                <h2>SEO Tools Hub</h2>
-                <p>6 powerful SEO keyword research tools in one place</p>
-                <button onclick="showPage('seo')">Open Tool</button>
+        <!-- Internal Links Section for SEO -->
+        <div style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+            <article style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 15px rgba(0,0,0,0.08);">
+                <h2 style="color: #2c3e50; font-size: 1.8rem; margin-bottom: 1rem;">Quick Access to All Free Tools</h2>
+                <p style="color: #555; margin-bottom: 1rem;">Jump directly to any productivity tool you need. All tools are optimized for speed and accuracy:</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <a href="#text" onclick="showPage('text')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Free word counter and character counter online">📝 Text Counter Tool</a>
+                    <a href="#convert" onclick="showPage('convert')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Temperature, weight, length unit converter">🔄 Unit Converters</a>
+                    <a href="#pass" onclick="showPage('pass')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Secure random password generator free">🔐 Password Generator</a>
+                    <a href="#qr" onclick="showPage('qr')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Free QR code maker and generator">📱 QR Code Maker</a>
+                    <a href="#todo" onclick="showPage('todo')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Online todo list and task manager">✅ Todo List App</a>
+                    <a href="#notes" onclick="showPage('notes')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Free online notes app">📓 Notes App</a>
+                    <a href="#stop" onclick="showPage('stop')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Online stopwatch free with lap timer">⏱️ Stopwatch</a>
+                    <a href="#time" onclick="showPage('time')" style="padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Countdown timer with alarm online">⏲️ Timer</a>
+                    <a href="#seo" onclick="showPage('seo')" style="padding: 0.5rem 1rem; background: #e74c3c; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;" title="Free SEO tools and keyword research">🔍 SEO Tools Hub</a>
+                </div>
+                <p style="margin-top: 1.5rem; color: #555; font-size: 0.95rem;">
+                    <strong>Professional SEO Services:</strong> Need expert SEO optimization for your website? 
+                    <a href="https://www.fiverr.com/uzairali587?up_rollout=true" target="_blank" rel="dofollow" style="color: #1dbf73; font-weight: 600; text-decoration: none;">Hire Uzair Ali on Fiverr</a> - Top-rated SEO specialist with proven results in Google rankings, technical SEO, and website optimization.
+                </p>
             </article>
         </div>
     </section>
@@ -436,6 +495,10 @@
         <!-- TEXT TOOLS -->
         <section id="text" class="section">
             <h1>Text Analysis Tools</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Free online text counter and word analyzer. Perfect for writers, students, and content creators. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             <div class="group">
                 <label>Enter Text:</label>
                 <textarea id="txt" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
@@ -469,6 +532,10 @@
         <!-- CONVERTERS -->
         <section id="convert" class="section">
             <h1>Unit Converters</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Convert temperature, weight, and length units instantly with accurate formulas. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             <h2>Temperature Converter</h2>
             <div class="group">
                 <label>Celsius (°C)</label>
@@ -507,6 +574,10 @@
         <!-- PASSWORD GENERATOR -->
         <section id="pass" class="section">
             <h1>Password Generator</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Create ultra-secure random passwords with customizable options. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             <div class="group">
                 <label>Password Length: <span id="len-val">16</span></label>
                 <input type="range" id="len" min="8" max="128" value="16" oninput="updateLen()">
@@ -528,6 +599,10 @@
         <!-- QR CODE -->
         <section id="qr" class="section">
             <h1>QR Code Generator</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Generate and download custom QR codes for URLs, text, and more. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             <div class="group">
                 <label>Text or URL:</label>
                 <input type="text" id="qr-text" placeholder="Enter text or URL">
@@ -540,6 +615,10 @@
         <!-- TODO LIST -->
         <section id="todo" class="section">
             <h1>Todo List</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Smart task manager to organize your daily tasks. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             <div class="group">
                 <label>New Task:</label>
                 <input type="text" id="task-input" placeholder="Enter task..." onkeypress="if(event.key==='Enter') addTask()">
@@ -552,6 +631,10 @@
         <!-- NOTES -->
         <section id="notes" class="section">
             <h1>Notes</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Quick note-taking app with timestamps and search. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             <div class="group">
                 <label>Title:</label>
                 <input type="text" id="note-title" placeholder="Note title">
@@ -567,6 +650,10 @@
         <!-- STOPWATCH -->
         <section id="stop" class="section">
             <h1>Stopwatch</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Precision stopwatch with millisecond accuracy. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             <div class="timer-big" id="stopwatch">00:00:00</div>
             <div class="timer-btns">
                 <button class="btn" onclick="startStop()">Start</button>
@@ -578,6 +665,10 @@
         <!-- TIMER -->
         <section id="time" class="section">
             <h1>Countdown Timer</h1>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Countdown timer with customizable alarm sounds. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
             
             <div class="group">
                 <label>
@@ -605,7 +696,11 @@
         <!-- SEO TOOLS -->
         <section id="seo" class="section">
             <h1>SEO Tools Hub - Free Keyword Research</h1>
-            <p style="margin-bottom: 2rem; color: #555;">Access 6 powerful SEO tools to boost your rankings. Click any tool below to open it in a new tab.</p>
+            <p style="margin-bottom: 1.5rem; color: #555;">
+                Access 6 powerful SEO tools to boost your rankings. Click any tool to open in a new tab. 
+                <a href="#home" onclick="showPage('home')" style="color: #3498db; text-decoration: none;">← Back to all tools</a>
+            </p>
+            <p style="margin-bottom: 2rem; color: #555;">All tools are completely free and perfect for keyword research, competitor analysis, and content planning.</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                 <article class="item" style="cursor: pointer; transition: all 0.3s;" onclick="window.open('https://answerthepublic.com', '_blank')">
@@ -662,26 +757,107 @@
 
     <!-- SEO SECTION -->
     <section class="seo-section">
-        <h2>Website Optimized By</h2>
+        <h2>Professional SEO Services by Uzair Ali</h2>
         <div class="seo-profile">
-            <img src="uzair-ali-seo.jpg" alt="Uzair Ali SEO Expert" class="seo-image" onerror="this.style.display='none'">
+            <img src="uzair-ali-seo.jpg" alt="Uzair Ali - Professional SEO Expert & Web Developer" class="seo-image" onerror="this.style.display='none'">
             <div>
-                <h3>Uzair Ali</h3>
-                <p style="font-size: 1.2rem; color: #3498db;">Professional SEO Optimizer</p>
-                <p style="margin: 1rem 0;">Specialized in technical SEO, global rankings, and performance optimization.</p>
-                <div>
+                <h3>Uzair Ali - Top Fiverr SEO Expert</h3>
+                <p style="font-size: 1.2rem; color: #3498db; margin-bottom: 0.5rem;">Professional SEO Specialist | Technical SEO | Google Rankings Expert</p>
+                <p style="margin: 1rem 0;">
+                    Uzair Ali is a <strong>top-rated SEO specialist on Fiverr</strong> with expertise in technical SEO, keyword research, on-page optimization, and global search engine rankings. Specializing in helping businesses achieve <strong>first page Google rankings</strong> through proven SEO strategies and white-hat techniques.
+                </p>
+                <h4 style="color: white; margin: 1.5rem 0 1rem;">SEO Services Offered:</h4>
+                <ul style="color: white; line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                    <li><strong>Technical SEO Audit:</strong> Complete website analysis and optimization</li>
+                    <li><strong>Keyword Research:</strong> Low competition, high traffic keyword discovery</li>
+                    <li><strong>On-Page SEO:</strong> Meta tags, content optimization, internal linking</li>
+                    <li><strong>Off-Page SEO:</strong> Quality backlinks, domain authority building</li>
+                    <li><strong>Local SEO:</strong> Google My Business optimization, local rankings</li>
+                    <li><strong>E-commerce SEO:</strong> Product optimization, category pages, schema markup</li>
+                </ul>
+                <div style="margin: 1.5rem 0;">
                     <span class="badge">🎯 SEO Specialist</span>
-                    <span class="badge">📊 Analytics Expert</span>
-                    <span class="badge">🚀 Performance Pro</span>
+                    <span class="badge">📊 Google Analytics</span>
+                    <span class="badge">🚀 Page Speed Expert</span>
+                    <span class="badge">💻 Web Developer</span>
+                    <span class="badge">🔍 Keyword Research</span>
+                    <span class="badge">📈 Rank Tracking</span>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://www.fiverr.com/uzairali587?up_rollout=true" target="_blank" rel="dofollow" style="display: inline-block; padding: 1rem 2.5rem; background: #1dbf73; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(29, 191, 115, 0.4);">
+                        💼 Hire Uzair Ali on Fiverr - SEO Expert
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.95;">
+                        ⭐ <strong>Top Rated Seller</strong> | 100+ Successful Projects | Fast Turnaround | Guaranteed Results
+                    </p>
+                    <p style="margin-top: 0.8rem; font-size: 0.9rem; opacity: 0.9;">
+                        Services include: <strong>SEO audits, keyword research, technical SEO, link building, content optimization, Google rankings, website speed optimization, schema markup, and complete SEO packages</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="max-width: 900px; margin: 2rem auto; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+            <h3 style="color: white; margin-bottom: 1rem; text-align: center;">Why Hire Uzair Ali for SEO?</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; color: white;">
+                <div>
+                    <strong>✓ Proven Track Record:</strong> Hundreds of websites ranked on Google's first page
+                </div>
+                <div>
+                    <strong>✓ White-Hat Techniques:</strong> Only ethical, Google-approved SEO methods
+                </div>
+                <div>
+                    <strong>✓ Complete Transparency:</strong> Detailed reports and progress tracking
+                </div>
+                <div>
+                    <strong>✓ Affordable Pricing:</strong> Professional SEO services at competitive rates
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <h3>Supra Supernus</h3>
-        <p>Free Online Productivity Tools</p>
-        <p>© 2025 All Rights Reserved | Optimized by Uzair Ali</p>
+        <h3>Supra Supernus - Best Free Online Tools 2025</h3>
+        <p style="margin: 0.5rem 0;">Complete productivity suite with 9 professional tools for students, developers, writers & businesses</p>
+        
+        <!-- Footer Navigation for SEO -->
+        <nav style="margin: 1.5rem 0;" aria-label="Footer Navigation">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                <a href="#text" onclick="showPage('text')" style="color: #ecf0f1; text-decoration: none;" title="Free word counter online">Text Counter</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#convert" onclick="showPage('convert')" style="color: #ecf0f1; text-decoration: none;" title="Unit converter calculator">Unit Converters</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#pass" onclick="showPage('pass')" style="color: #ecf0f1; text-decoration: none;" title="Secure password generator">Password Generator</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#qr" onclick="showPage('qr')" style="color: #ecf0f1; text-decoration: none;" title="QR code maker free">QR Code Generator</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#todo" onclick="showPage('todo')" style="color: #ecf0f1; text-decoration: none;" title="Online todo list app">Todo List</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#notes" onclick="showPage('notes')" style="color: #ecf0f1; text-decoration: none;" title="Free notes app online">Notes App</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#stop" onclick="showPage('stop')" style="color: #ecf0f1; text-decoration: none;" title="Stopwatch online free">Stopwatch</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#time" onclick="showPage('time')" style="color: #ecf0f1; text-decoration: none;" title="Countdown timer with alarm">Timer</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="#seo" onclick="showPage('seo')" style="color: #ecf0f1; text-decoration: none;" title="Free SEO tools">SEO Tools</a>
+            </div>
+        </nav>
+        
+        <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+            <p style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Need Professional SEO Services?</strong></p>
+            <p style="font-size: 0.95rem;">
+                Get your website to <strong>Google's first page</strong> with expert SEO by 
+                <a href="https://www.fiverr.com/uzairali587?up_rollout=true" target="_blank" rel="dofollow" style="color: #1dbf73; font-weight: 600; text-decoration: none;">Uzair Ali - Top Rated Fiverr SEO Specialist</a>
+            </p>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.9;">
+                Services: Technical SEO Audit | Keyword Research | On-Page SEO | Link Building | Local SEO | E-commerce SEO
+            </p>
+        </div>
+        
+        <p style="margin-top: 1rem;">© 2025 Supra Supernus. All Rights Reserved</p>
+        <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem;">
+            Keywords: free online tools, text counter, unit converter, password generator, QR code maker, todo list, notes app, stopwatch, timer, SEO tools
+        </p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
